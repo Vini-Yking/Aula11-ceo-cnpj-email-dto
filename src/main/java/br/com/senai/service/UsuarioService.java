@@ -69,7 +69,7 @@ public class UsuarioService {
 			usuarioPerfil.setPerfil(perfilService.buscar(usuarioPerfil.getPerfil().getId()));
 		}
 		usuarioPerfilRepository.saveAll(usuarioInserirDTO.getUsuarioPerfis());
-		mailConfig.enviarEmail(usuario.getEmail(), "Confirmação de Cadastro de Usuario", usuario.toString());
+		//mailConfig.enviarEmail(usuario.getEmail(), "Confirmação de Cadastro de Usuario", usuario.toString());
 		return new UsuarioDTO(usuario);
 	}
 
