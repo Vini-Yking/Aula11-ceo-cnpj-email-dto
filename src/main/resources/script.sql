@@ -1,3 +1,4 @@
+create schema if not exists cursoapi ;
 CREATE TABLE
  cursoapi.usuario(
 id_usuario serial PRIMARY KEY,
@@ -20,7 +21,7 @@ localidade varchar(40),uf varchar(2),ibge int);
 
 Alter TABLE cursoapi.usuario add column id_endereco bigint, 
 Add constraint FK_ID_ENDERECO
-Foreing key(id_endereco) references cursoapi.endereco(id_endereco);
+FOREIGN key(id_endereco) references cursoapi.endereco(id_endereco);
 
 CREATE  TABLE cursoapi.funcionario (id_funcionario serial primary key, nome varchar(60));
 CREATE TABLE foto (id_foto serial primary key, dados oid, tipo varchar(100), nome varchar(100), id_funcionario bigint,
